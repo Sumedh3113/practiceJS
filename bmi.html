@@ -1,0 +1,20 @@
+<script>
+var johnMass = prompt("Enter Weight of John");
+
+var markMass = prompt("Enter Weight of Mark");
+
+var markHt = 180;
+
+var johnHt = 160;
+
+var markBmi = markMass/(markHt*markHt);
+
+var johnBmi = johnMass/(johnHt*johnHt);
+
+console.log(johnBmi,markBmi);
+
+
+var isJohnHealthy = markBmi > johnBmi;
+
+console.log('John is healthier than Mark' + ' '+ isJohnHealthy);
+</script>
