@@ -3,7 +3,11 @@ var john = {
 firstName:'John',
 lastName:'Janardhan',
 mass:95,
-height:1.65
+height:1.65,
+bmiCalc: function(){
+return this.bmi = this.mass/(this.height*this.height);
+
+}
 };
 
 
@@ -13,6 +17,11 @@ mark.firstName = 'Mark';
 mark.lastName = 'Mahar';
 mark['mass'] = 85;
 mark['height'] = 1.5;
+mark['bmiCalc']=function(){
+return this.bmi = this.mass/(this.height*this.height);
+}
 
-console.log(mark)
+var markBmi = mark.bmiCalc();
+var johnBmi = john.bmiCalc();
+console.log()
 </script>
