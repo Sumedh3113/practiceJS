@@ -27,6 +27,55 @@ tipCalc: function(){
 
 john.tipCalc();
 
-console.log(john.amountpaid)
+//console.log(john.amountpaid)
+
+/*Mark's Bills*/
+var mark = {
+firstName:'Mark',
+bills:[77, 375, 110,45],
+tips:[],
+amountpaid:[],
+tipCalc: function(){
+		for (var i =0 ; i < this.bills.length; i++){
+				if(this.bills[i] < 100){
+				this.tips.push(this.bills[i]*0.2);
+				this.amountpaid.push(this.bills[i] + this.bills[i]*0.2);
+				}
+				else if(this.bills[i] >= 100 && this.bills[i] <= 300){
+				this.tips.push(this.bills[i]*0.10);
+				this.amountpaid.push(this.bills[i] + this.bills[i]*0.15);
+				}
+				else{
+				this.tips.push(this.bills[i]*0.25);
+				this.amountpaid.push(this.bills[i] + this.bills[i]*0.1);
+				}
+				
+				
+													}
+}
+};
+
+mark.tipCalc()
+//console.log(mark.tips)
+function average(array){
+var sum = 0;
+for(var i =0; i < array.length; i++){
+sum += array[i]; 
+
+}
+var avg = sum/array.length;
+
+return avg;
+
+}
+
+
+var johnAvg = average(john.tips);
+var markAvg = average(mark.tips);
+
+console.log(johnAvg,markAvg);
+var MaxTip = johnAvg>markAvg ? johnAvg:markAvg;
+
+console.log(MaxTip);
 
 </script>
