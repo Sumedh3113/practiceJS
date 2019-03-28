@@ -1,0 +1,33 @@
+<!--//pick winner-->
+
+<script>
+var john, mike, marry;
+john = [94, 123 , 113 ];
+mike = [114, 94 , 123 ];
+marry = [113, 94 , 123 ];
+
+
+var javg, miavg, maavg;
+
+javg = (john[0] + john[1] + john[2])/3;
+
+miavg = (mike[0] + mike[1] + mike[2])/3;
+
+maavg = (marry[0] + marry[1] + marry[2])/3;
+
+console.log(javg,miavg,maavg)
+if(javg > miavg && javg > maavg){
+
+console.log('John is winner with score' +' '+ javg);
+}
+else if(miavg > javg && miavg > maavg){
+console.log('Mike is winner with score'+' '+miavg);
+}
+ else if(maavg > javg && maavg > miavg){
+console.log('Marry is winner with score'+' '+ maavg);
+}else{
+console.log("There is a draw");
+}
+
+
+</script>
