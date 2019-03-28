@@ -1,4 +1,5 @@
 <script>
+/*Solved in 15 minutes*/
 var john = {
 firstName:'John',
 bills:[124, 48, 268, 180, 42 ],
@@ -32,7 +33,7 @@ john.tipCalc();
 /*Mark's Bills*/
 var mark = {
 firstName:'Mark',
-bills:[77, 375, 110,45],
+bills:[77, 475, 110,45],
 tips:[],
 amountpaid:[],
 tipCalc: function(){
@@ -41,7 +42,7 @@ tipCalc: function(){
 				this.tips.push(this.bills[i]*0.2);
 				this.amountpaid.push(this.bills[i] + this.bills[i]*0.2);
 				}
-				else if(this.bills[i] >= 100 && this.bills[i] <= 300){
+				else if(this.bills[i] >= 100 && this.bills[i] < 300){
 				this.tips.push(this.bills[i]*0.10);
 				this.amountpaid.push(this.bills[i] + this.bills[i]*0.15);
 				}
