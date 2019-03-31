@@ -1,0 +1,84 @@
+<script>
+
+var score = 0;
+var userAns, finalAns; 
+
+//userAns = prompt('Choose your answer. write \"exit\" to quit');
+
+var Question = function(que, option, correct){
+    this.que = que;
+    this.option =  option;
+    this.correct = correct;
+    
+    
+} 
+
+
+var question1 = new Question('Where is silicon valley in US?', choice = {
+            1:'San Jose',
+            2:'SF',
+            3:'None'}, 1);
+
+var question2 = new Question('Where is silicon valley in India?', choice = {
+            1:'Mumbai',
+            2:'Banglore',
+            3:'Paratwada'}, 3);
+
+var question3 = new Question('Where will you get worlds best tea?', choice = {
+            1:'Assam',
+            2:'Meghalay',
+            3:'Cafe Good Luck'}, 3);
+
+var questack = [question1,question2,question3];    
+
+while(true){
+//    if(userAns === 'exit'){
+//    //console.log()    
+//        
+//        break;
+//    }
+//    else{
+//    
+var queIndex = nextQue();
+    
+    
+(function(){
+console.log(questack[queIndex].que);
+console.log(questack[queIndex].option);
+    
+})();
+        
+userAns = prompt('Choose your answer. write \"exit\" to quit');
+finalAns = parseInt(userAns);
+    
+if(finalAns === questack[queIndex].correct){
+    console.log('Correct Ans. Your score is '+ ++score );
+    nextQue();
+}else{
+    
+    if(userAns == 'exit'){
+        console.log('good bye!!! Your final Score is ' + score);
+        break;
+    }else{
+    console.log('Wrong Answer!!Try again. Your current score is '+ score);
+    nextQue();
+    }
+}
+    
+function nextQue(){
+    var choose, nextQuestion;
+    
+    index = Math.round(Math.random()*2);
+    
+    //console.log(index);
+    return index;
+    
+}
+        
+//else
+  // }
+
+//while
+}
+
+</script>
