@@ -67,7 +67,7 @@ if(finalAns === questack[queIndex].correct){
     
 function nextQue(){
     var choose, nextQuestion;
-    
+    //use array.length and floor to round down instead of hard coded value
     index = Math.round(Math.random()*2);
     
     //console.log(index);
